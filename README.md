@@ -1,2 +1,2 @@
-# locationsGT2023
+# hiveFinder2023
 F2023 GITMAD project - alarm
