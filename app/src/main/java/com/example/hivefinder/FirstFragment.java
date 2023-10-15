@@ -30,15 +30,15 @@ public class FirstFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         // Set the background for this fragment's root view
-        view.setBackgroundResource(R.drawable.c3);
+        view.setBackgroundResource(R.drawable.c1);
 
-        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+        /*binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
-        });
+        });*/
     }
 
     @Override
