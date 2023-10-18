@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import androidx.core.view.GravityCompat;
 import androidx.core.view.WindowCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
@@ -20,6 +21,10 @@ import com.example.hivefinder.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.util.HashSet;
+import java.util.Set;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration appBarConfiguration;
@@ -43,14 +48,40 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.nav_view);
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
 
+        Set<Integer> topLevelDestinations = new HashSet<>();
+        topLevelDestinations.add(R.id.FirstFragment);
+        topLevelDestinations.add(R.id.SecondFragment);
         // Set up the AppBarConfiguration
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph())
+        appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinations)
                 .setDrawerLayout(drawerLayout)
                 .build();
 
         // Connect everything together
         NavigationUI.setupWithNavController(navigationView, navController);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int itemId = item.getItemId();
+            NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+            /*switch (itemId) {
+                case R.id.culc1:
+                    navController.navigate(R.id.FirstFragment);
+                    break;
+                case R.id.culc2:
+                    navController.navigate(R.id.SecondFragment);
+                    break;
+            }*/
+            if(itemId == R.id.culc2) {
+                navController.navigate(R.id.SecondFragment);
+            } else if (itemId == R.id.culc1){
+                navController.navigate(R.id.FirstFragment);
+            }
+
+            // Close the drawer after selecting an item
+            DrawerLayout drawer = findViewById(R.id.drawer_layout);
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+        });
     }
 
     @Override
