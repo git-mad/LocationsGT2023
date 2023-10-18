@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
         Set<Integer> topLevelDestinations = new HashSet<>();
         topLevelDestinations.add(R.id.FirstFragment);
         topLevelDestinations.add(R.id.SecondFragment);
+        topLevelDestinations.add(R.id.Culc3Fragment);
+        topLevelDestinations.add(R.id.Culc4Fragment);
+        topLevelDestinations.add(R.id.Culc5Fragment);
         // Set up the AppBarConfiguration
         appBarConfiguration = new AppBarConfiguration.Builder(topLevelDestinations)
                 .setDrawerLayout(drawerLayout)
@@ -75,6 +78,12 @@ public class MainActivity extends AppCompatActivity {
                 navController.navigate(R.id.SecondFragment);
             } else if (itemId == R.id.culc1){
                 navController.navigate(R.id.FirstFragment);
+            } else if (itemId == R.id.culc3){
+                navController.navigate(R.id.Culc3Fragment);
+            } else if (itemId == R.id.culc4) {
+                navController.navigate(R.id.Culc4Fragment);
+            } else if (itemId == R.id.culc5) {
+                navController.navigate(R.id.Culc5Fragment);
             }
 
             // Close the drawer after selecting an item

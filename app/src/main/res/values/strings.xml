@@ -4,6 +4,9 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">CULC 1F</string>
     <string name="second_fragment_label">CULC 2F</string>
+    <string name="fragment_culc3_label">CULC 3F</string>
+    <string name="fragment_culc4_label">CULC 4F</string>
+    <string name="fragment_culc5_label">CULC 5F</string>
 
     <string-array name="floors_array">
         <item>CULC 1F</item>

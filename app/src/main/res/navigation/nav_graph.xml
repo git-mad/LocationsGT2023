@@ -14,6 +14,15 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_Culc3Fragment"
+            app:destination="@id/Culc3Fragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_Culc4Fragment"
+            app:destination="@id/Culc4Fragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_Culc5Fragment"
+            app:destination="@id/Culc5Fragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -24,5 +33,72 @@
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_Culc3Fragment"
+            app:destination="@id/Culc3Fragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_Culc4Fragment"
+            app:destination="@id/Culc4Fragment" />
+        <action
+            android:id="@+id/action_SecondFragment_to_Culc5Fragment"
+            app:destination="@id/Culc5Fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/Culc3Fragment"
+        android:name="com.example.hivefinder.Culc3F"
+        android:label="@string/fragment_culc3_label"
+        tools:layout="@layout/fragment_culc3">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_Culc3Fragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_Culc3Fragment_to_Culc4Fragment"
+            app:destination="@id/Culc4Fragment" />
+        <action
+            android:id="@+id/action_Culc3Fragment_to_Culc5Fragment"
+            app:destination="@id/Culc5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Culc4Fragment"
+        android:name="com.example.hivefinder.Culc4F"
+        android:label="@string/fragment_culc4_label"
+        tools:layout="@layout/fragment_culc4">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_Culc3Fragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_Culc4Fragment_to_Culc3Fragment"
+            app:destination="@id/Culc3Fragment" />
+        <action
+            android:id="@+id/action_Culc4Fragment_to_Culc5Fragment"
+            app:destination="@id/Culc5Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Culc5Fragment"
+        android:name="com.example.hivefinder.Culc5F"
+        android:label="@string/fragment_culc5_label"
+        tools:layout="@layout/fragment_culc5">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+        <action
+            android:id="@+id/action_Culc3Fragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_Culc5Fragment_to_Culc3Fragment"
+            app:destination="@id/Culc3Fragment" />
+        <action
+            android:id="@+id/action_Culc5Fragment_to_Culc4Fragment"
+            app:destination="@id/Culc4Fragment" />
+    </fragment>
+
 </navigation>
